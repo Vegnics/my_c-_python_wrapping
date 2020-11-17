@@ -3,8 +3,8 @@ cimport pygeometry
 cimport numpy as np
 
 
-DTYPE = np.float32 #np.NPY_FLOAT32
-ctypedef np.float32_t DTYPE_t #np.NPY_FLOAT32_t DTYPE_t
+DTYPE = np.float32
+ctypedef np.float32_t DTYPE_t
 
 cdef class pypoint:
     cdef point pointobj

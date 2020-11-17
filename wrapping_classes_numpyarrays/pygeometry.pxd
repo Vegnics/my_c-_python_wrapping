@@ -7,3 +7,4 @@ cdef extern from "geometry.hpp" namespace "geom":
         point(float,float,float) except +
         float x,y,z
         float distance(point)
+        void print()
