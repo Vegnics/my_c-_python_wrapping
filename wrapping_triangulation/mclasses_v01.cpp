@@ -407,8 +407,8 @@ triangleList triangulate2D(pixelList Reg){
 	}
 	T.fill(tbuffer,tbufferL);	//fill the main Triangle List with the triangle buffer
 	T.print();	
-	cout<<T.L<<endl;
-	cout<<Reg.L<<endl;
+	//cout<<T.L<<endl;
+	//cout<<Reg.L<<endl;
 	return T;
 }
 
