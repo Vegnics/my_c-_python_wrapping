@@ -1,14 +1,15 @@
 from pytriangulation import py2Dtriangulate,pyAreaCalc
 import numpy as np
-points=np.zeros((100,2),dtype=np.int)
-points3D=np.zeros((100,3),dtype=np.float32)
+ptnum = 200
 
-for i in range(10):
-    for j in range(10):
-        points[j+10*i,:]=[i,j]
-        points3D[j+10*i,:]=[i,j,0]
+points=np.zeros((ptnum**2,2),dtype=np.int)
+points3D=np.zeros((ptnum**2,3),dtype=np.float32)
 
-print(points.shape)
+for i in range(ptnum):
+    for j in range(ptnum):
+        points[j+ptnum*i,:]=[i,j]
+        points3D[j+ptnum*i,:]=[i,j,0]
+
 area = pyAreaCalc(points,points3D)
 print("The area is {}".format(area))
 

@@ -28,10 +28,6 @@ def py2Dtriangulate(np.ndarray[pxDTYPE_t,ndim=2] pixelarray):
         pxbuff[idx].idx=idx
 
     pxlist.fillList(pxbuff,pixelarray.shape[0])
-    #for idx in range(pixelarray.shape[0]):
-    #    print(pxbuff[idx].i)
-    #    print(pxbuff[idx].j)
-    #    print(pxbuff[idx].idx)
     T = triangulate2D(pxlist)
     Tarray = np.zeros((T.L,3),dtype=np.int)
     for Tidx in range(T.L):
