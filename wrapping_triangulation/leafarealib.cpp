@@ -5,7 +5,7 @@
  *      Author: amaranth
  */
 
-#include"mclasses.h"
+#include"leafarealib.h"
 #include<iostream>
 #include<new>
 #include<cmath>
@@ -406,9 +406,6 @@ triangleList triangulate2D(pixelList Reg){
 		}
 	}
 	T.fill(tbuffer,tbufferL);	//fill the main Triangle List with the triangle buffer
-	T.print();	
-	//cout<<T.L<<endl;
-	//cout<<Reg.L<<endl;
 	return T;
 }
 

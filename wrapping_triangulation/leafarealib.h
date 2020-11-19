@@ -5,8 +5,8 @@
  *      Author: amaranth
  */
 
-#ifndef MCLASSES_H_
-#define MCLASSES_H_
+#ifndef LEAFAREA_H_
+#define LEAFAREA_H_
 #include<fstream>
 #include<string>
 using namespace std;

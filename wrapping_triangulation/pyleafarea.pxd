@@ -1,7 +1,7 @@
-cdef extern from "mclasses_v01.cpp":
+cdef extern from "leafarealib.cpp":
     pass
 
-cdef extern from "mclasses.h" namespace "geom":
+cdef extern from "leafarealib.h" namespace "geom":
     cdef cppclass pixel:
         pixel() except +
         pixel(int,int,int) except +
@@ -28,12 +28,12 @@ cdef extern from "mclasses.h" namespace "geom":
         point3D(float,float,float) except +
         float x,y,z
 
-    cdef cpp point3DList:
-        point3DList() except +
-        void fill(point3D* , int)
-        point3D* points
-	    int L
-
     triangleList triangulate2D(pixelList)
 
-    double areaCalc(point3DList ,triangleList)
+    cdef cppclass point3DList:
+        point3DList() except +
+        point3D* points
+        int L
+        void fill(point3D*,int)
+
+    double areaCalc(point3DList,triangleList)
